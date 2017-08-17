@@ -34,6 +34,7 @@
             // 
             // SplashScreenTimer
             // 
+            this.SplashScreenTimer.Enabled = true;
             this.SplashScreenTimer.Interval = 3000;
             this.SplashScreenTimer.Tick += new System.EventHandler(this.SplashScreenTimer_Tick);
             // 
