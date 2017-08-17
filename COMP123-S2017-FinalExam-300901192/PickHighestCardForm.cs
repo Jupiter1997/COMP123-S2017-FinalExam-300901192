@@ -11,17 +11,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Name: Marvin Jupiter Vargas
+ * Student No.: 300901192
+ * Date: August 17, 2017
+ * Description: Picks the highest card out of five cards
+ * Version 0.1: PickHighescardForm codes
  */
 
 namespace COMP123_S2017_FinalExam_300901192
 {
     public partial class PickHighestCardForm : Form
     {
+        
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         List<PictureBox> _dealtCardPictureBoxList;
         int _currentDealtCardIndex;
