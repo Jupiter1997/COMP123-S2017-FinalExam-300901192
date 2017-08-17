@@ -7,6 +7,7 @@ using System.Windows.Forms;
 /*
  * Name: Marvin Jupiter Vargas
  * Student No.: 300901192
+ * App Name: Pick the Highest Card Game
  * Date: August 17, 2017
  * Description: This will the keep track of the Score in the main form
  * Version 0.1: Created Scoreboard Class
@@ -98,9 +99,8 @@ namespace COMP123_S2017_FinalExam_300901192
         /// </summary>
         public void UpdateTime()
         {
-            int txtboxTime;
-            txtboxTime = Convert.ToInt32(TimeTextBox.Text) - 1;
-            Time = txtboxTime;
+            int txtboxTime = Convert.ToInt32(TimeTextBox.Text);
+            Time = txtboxTime -1;
             TimeTextBox.Text = Time.ToString();
 
         }

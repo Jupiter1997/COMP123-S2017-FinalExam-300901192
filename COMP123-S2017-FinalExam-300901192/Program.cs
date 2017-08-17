@@ -7,9 +7,9 @@ using System.Windows.Forms;
 /*
  * Name: Marvin Jupiter Vargas
  * Student No.: 300901192
+ * App Name: Pick the Highest Card Game
  * Date: August 17, 2017
- * Description: This is the Splash screen form the will show up first when starting
- * the program and wil the Main form after 3 seconds
+ * Description: Program class
  * Version 0.1: Added a public static variable for splash screen
  */
 

@@ -13,6 +13,7 @@ using System.Windows.Forms;
 /*
  * Name: Marvin Jupiter Vargas
  * Student No.: 300901192
+ * App Name: Pick the Highest Card Game
  * Date: August 17, 2017
  * Description: Picks the highest card out of five cards
  * Version 0.1: PickHighescardForm codes
@@ -31,7 +32,23 @@ namespace COMP123_S2017_FinalExam_300901192
         Hand _hand;
         int _maximumPoints;
 
+        //300901192
+        private ScoreBoard _scoreBoard;
+
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        //300901192
+        public ScoreBoard ScoreBoard
+        {
+            get
+            {
+               return this._scoreBoard;
+            }
+            set
+            {
+                this._scoreBoard = value;
+            }
+        }
         public List<PictureBox> DealtCardPictureBoxList
         {
             get
@@ -200,6 +217,8 @@ namespace COMP123_S2017_FinalExam_300901192
             this._enableDealtCards();
             this._hideFinalScore();
             UserMessageTextBox.Text = "Click the Deal Button!";
+            ScoreBoard.Score = 0; // Reseting the game will also reset the score ti Zero
+            ScoreBoard.Time = 30; // Also resets the timer back to thirty 
         }
 
         /// <summary>
@@ -227,6 +246,10 @@ namespace COMP123_S2017_FinalExam_300901192
             // Initialize the App Sounds
             this._buildDealtCardPictureBoxList();
             this._reset();
+            ScoreBoard scoreboard = new ScoreBoard(ScoreTextBox, TimeTextBox, FinalScoreTextBox);
+
+           
+            
         }
 
         /// <summary>
@@ -273,7 +296,7 @@ namespace COMP123_S2017_FinalExam_300901192
                 this.CurrentClickedCard.BackColor = Color.Green;
                 UserMessageTextBox.Text = "You Got It!";
 
-                //Uncomment this --> ScoreBoard.Score += this.MaximumPoints;
+                ScoreBoard.Score += this.MaximumPoints;
 
                 DealButton.Enabled = true;
             }
@@ -359,8 +382,8 @@ namespace COMP123_S2017_FinalExam_300901192
         /// <param name="e"></param>
         private void CountDownTimer_Tick(object sender, EventArgs e)
         {
-            /* Uncomment THIS
-            ScoreBoard.UpdateTime();
+            
+           // ScoreBoard.UpdateTime();
             if (ScoreBoard.Time == 0)
             {
                 CountDownTimer.Enabled = false;
@@ -368,7 +391,7 @@ namespace COMP123_S2017_FinalExam_300901192
                 this._disableDealtCards();
                 this._showFinalScore();
             }
-            */
+            
         }
 
         /// <summary>
