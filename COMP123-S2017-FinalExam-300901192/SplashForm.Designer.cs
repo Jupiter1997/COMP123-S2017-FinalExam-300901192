@@ -32,6 +32,11 @@
             this.SplashScreenTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
+            // SplashScreenTimer
+            // 
+            this.SplashScreenTimer.Interval = 3000;
+            this.SplashScreenTimer.Tick += new System.EventHandler(this.SplashScreenTimer_Tick);
+            // 
             // SplashForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
